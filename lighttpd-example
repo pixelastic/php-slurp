@@ -1,0 +1,6 @@
+$HTTP["host"] == "zynga1-a.akamaihd.net" {
+	server.document-root = "/var/www/slurp/websites/zynga1-a.akamaihd.net"
+	url.rewrite-if-not-file = (
+		"^([^\?]*)(\?(.+)?)?$" => "index.php?url=$1&$3"
+	)	
+}

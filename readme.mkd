@@ -1,0 +1,25 @@
+What is it ?
+============
+
+Slurp is a very simple and naive php that you can use to download a website as
+you are visiting it.
+
+How does it work ?
+==================
+
+Just edit your `hosts` file and add a line that redirect the website you want
+to proxy to where `slurp` is installed.
+
+Then configure your local webserver to redirect all unknown resources to the
+main `index.php` gateway.
+
+Slurp will then download the file initially requested and save it locally. If
+the file has already been saved, slurp will simply return the local file.
+
+What can I use it for ?
+=======================
+
+Well, I don't know for you but I used it to easily create a local copy of the
+files that were downloaded when I was browsing some sites. `wget` is a great
+tool, but sometimes when pages are loaded through AJAX or flash, `slurp` is
+much powerful as every request will be saved locally.
